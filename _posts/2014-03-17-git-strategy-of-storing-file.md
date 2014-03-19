@@ -1,8 +1,11 @@
-----
+---
 layout: post
 published: true
 title: git的存储
-----
+---
+
+{{ page.title }}
+================
 
 git的存储，基本上就是把所有的东西都存了一遍。
 
