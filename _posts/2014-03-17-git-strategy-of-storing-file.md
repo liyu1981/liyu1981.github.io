@@ -1,3 +1,9 @@
+----
+layout: post
+published: true
+title: git的存储
+----
+
 git的存储，基本上就是把所有的东西都存了一遍。
 
 具体的细节可以见这里
