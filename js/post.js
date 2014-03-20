@@ -101,7 +101,7 @@ $(document).ready(function(){
 
         function genIndex(){
             var tmpl = genTmpl();
-            var indexCon = '<div id="menuIndex" class="sidenav"></div>';
+            var indexCon = '<div id="menuIndex" class="sidenav"><h2>目录</h2></div>';
 
             $('#content').append(indexCon);
 

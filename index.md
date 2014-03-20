@@ -16,8 +16,8 @@ layout: home
         </ul>
     </div>
     <div class="aside" style="background-image: url('http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-QCTQNpn/0/X3/IMG_3940-X3.jpg')">
-      <div class="avatar">
-        <img style="background-image: url('https://secure.gravatar.com/avatar/6a1f8a9d412c8e54bed896135c6f7d0c?s=150')"></img>
+      <div class="avatar circle" style="width: 150px; height: 150px; position: absolute; right: -75px; top: 75px;">
+        <div class="center" style="margin-top: 4px; height: 142px; width: 142px; border-radius: 71px; background-image: url('https://secure.gravatar.com/avatar/6a1f8a9d412c8e54bed896135c6f7d0c?s=142')"></div>
       </div>
     </div>
 </div>
