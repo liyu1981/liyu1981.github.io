@@ -10,7 +10,7 @@ git的存储，基本上就是把所有的东西都存了一遍。
 
 ## 具体的细节
 
-可以见这里 http://git-scm.com/book/en/Git-Internals-Git-Objects
+可以见这里 [[http://git-scm.com/book/en/Git-Internals-Git-Objects]]
 
 ## 懒得看细节
 
@@ -146,4 +146,4 @@ git按照sha编码存放文件，具体存在哪里？ 随便翻翻.git/objects/
 
 git这个东西，Linus本人觉得比linux kernel做的更好，他自己相当得意（不服的可以去kernel mail list还是什么地方吐个槽[呼唤他](http://thread.gmane.org/gmane.comp.version-control.git/57643/focus=57918)）。其编写过程中的一些思路方法（比如简单优先，不做重复的事情）也值得我们借鉴。
 
-就算你不用git，有时间也可以看看这个talk https://www.youtube.com/watch?v=4XpnKHJAok8 Linus本人讲git，很有启发。
+就算你不用git，有时间也可以看看这个talk [[https://www.youtube.com/watch?v=4XpnKHJAok8]] Linus本人讲git，很有启发。
