@@ -15,7 +15,25 @@ layout: home
         {% endfor %}
         </ul>
     </div>
-    <div class="aside" style="background-image: url('http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-QCTQNpn/0/X3/IMG_3940-X3.jpg')">
+    <script>
+      $(function() {
+        function geturl() {
+          var all = [
+            'url("http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-QCTQNpn/0/X3/IMG_3940-X3.jpg")',
+            'url("http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-zvPmxS6/0/X3/IMG_3006-X3.jpg")',
+            'url("http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-mt6dbQD/0/X3/IMG_5953-X3.jpg")',
+            'url("http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-BW2MzfC/0/X3/IMG_3402-X3.jpg")',
+            'url("http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-HwZrx3V/0/X3/IMG_3374-X3.jpg")',
+            'url("http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-HwZrx3V/0/X3/IMG_3374-X3.jpg")',
+            'url("http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-3mqdZgt/0/X3/IMG_2301-X3.jpg")',
+            'url("http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-MpHzMZ7/0/X3/IMG_1448-X3.jpg")'
+          ];
+          return all[Math.floor((Math.random()*all.length))];
+        }
+        $('div.aside').css('background-image', geturl());
+      });
+    </script>
+    <div class="aside">
       <div class="avatar circle" style="width: 150px; height: 150px; position: absolute; right: -75px; top: 75px;">
         <div class="center" style="margin-top: 4px; height: 142px; width: 142px; border-radius: 71px; background-image: url('https://secure.gravatar.com/avatar/6a1f8a9d412c8e54bed896135c6f7d0c?s=142')"></div>
       </div>
