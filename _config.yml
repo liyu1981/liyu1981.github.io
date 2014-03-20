@@ -5,7 +5,7 @@ pygments: true
 paginate: 8
 permalink: /:title
 
-title: tl;dr
-url: http://www.ngo4.asia
+title: LI, Yu from 1981
+url: http://liyu1981.github.io
 feed: /atom.xml
-author_info: <a href="http://beiyuu.com/">LI,Yu</a>
+author_info: <a href="http://liyu1981.github.io/">LI,Yu</a>
