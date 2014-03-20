@@ -32,7 +32,7 @@ body .hide{display:none;}
 
 
 /***********default settings**********/
-body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;}
+body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px; background-color: #f7f7f7; }
 a {color:#4A75B5;text-decoration:none;outline:none;}
 a:hover {text-decoration:underline}
 a.external {padding-right:13px;background:url('/images/icons.gif') no-repeat right 1px;}
@@ -83,23 +83,32 @@ pre ol{margin-left:25px;list-style-type:decimal;}
     background-size:cover;
     background-position:50% 50%;
 }
-.blog .aside{
-    background-image:url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*cF2i1ZosSP_UTJig.jpeg);
+
+.index-content .aside .avatar {
+  position: absolute;
+  right: -75px;
+  top: 75px;
+  border-radius: 75px;
+  padding: 4px;
+  box-shadow: 0 0 3px #000;
+  background-color: #fff;
 }
-.opinion .aside{
-    background-image:url(https://dnqgz544uhbo8.cloudfront.net/_/fp/img/bestof/june-2013.CaUUbO2jIECgCmldhmxCCA.jpg);
+
+.index-content .aside .avatar img {
+  vertical-align: middle;
+  height: 142px;
+  width: 142px;
+  border-radius: 71px;
 }
-.project .aside{
-    background-image:url('https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*kTUZamBulGQZg1MW.jpeg')
-}
-.index-content .section { margin-left:30%; padding-top:80px; padding-right:15%; ;}
+
+.index-content .section { margin-left:30%; padding-top:0px; padding-right:15%; }
 
 .index-content .artical-list { width:70%; margin:0 auto; }
 .index-content .artical-list li { margin-bottom:70px; }
 .index-content h2 { font-size:20px; margin-bottom:15px; word-break: break-all;}
-.index-content h2 a { color:#444 }
-.index-content h2 a:hover { color:#E50053; text-decoration:none; }
-.index-content .title-desc {color:#999;font-size:14px;line-height:1.6em;}
+.index-content h2 a { color:#444; text-decoration: underline; }
+.index-content h2 a:hover { color:#E50053; }
+.index-content .title-desc {color:#666;font-size:14px;line-height:1.8em;}
 
 .index-content .artical-cate { width:70%; margin:0 auto; }
 .index-content .artical-cate li { display:inline-block; *float:left; zoom:1; font-size:18px; width:32%; cursor:pointer; }

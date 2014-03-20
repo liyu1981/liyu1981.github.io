@@ -15,6 +15,9 @@ layout: home
         {% endfor %}
         </ul>
     </div>
-    <div class="aside">
+    <div class="aside" style="background-image: url('http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-QCTQNpn/0/X3/IMG_3940-X3.jpg')">
+      <div class="avatar">
+        <img style="background-image: url('https://secure.gravatar.com/avatar/6a1f8a9d412c8e54bed896135c6f7d0c?s=150')"></img>
+      </div>
     </div>
 </div>
