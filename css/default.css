@@ -40,6 +40,7 @@ a.external:hover {background-position:right -15px;}
 .entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#000;text-align:left;word-wrap: break-word; }
 .entry-title a:hover {text-decoration:none;}
 .entry-date {text-align:left;color:#999;margin-bottom:20px;font-size:14px;border-bottom:1px dashed #999;}
+.entry-date span.lastModified {margin-right: 95px; float: right;}
 
 h2 {font-size:22px;font-weight:bold;margin-bottom:25px;}
 h3 {font-size:18px;font-weight:bold;margin-bottom:25px;}
@@ -116,25 +117,6 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .index-content .cate-bar { height:3px; width:70%; margin:0 auto;margin-bottom:100px; }
 .index-content #cateBar { display:inline-block; zoom:1; height:3px; background:red; position:relative; width:0; }
 
-/*
-.avatar {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  border-radius: 75px;
-  padding: 4px;
-  box-shadow: 0 0 3px #000;
-  background-color: #fff;
-}
-
-.avatar img {
-  vertical-align: middle;
-  height: 142px;
-  width: 142px;
-  border-radius: 71px;
-}
-*/
-
 /***************Wiki Style*****************/
 .wiki h2{cursor:pointer;}
 .wiki ul{margin-left:30px;margin-bottom:20px;list-style:disc}
@@ -142,7 +124,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .wiki ul ul{list-style:circle;margin-top:10px;margin-bottom:10px;}
 
 /***************contact style*************/
-#disqus_container {font-size:12px;}
+#disqus_container {font-size:12px; border-top: 1px dashed #999;}
 #disqus_container a.comment{font-size:14px;}
 h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 .about-link a {margin-right:10px;font-weight:bold;font-style:italic;font-size:13px;color:#E50053}

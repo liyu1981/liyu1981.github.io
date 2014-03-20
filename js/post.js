@@ -212,4 +212,19 @@ $(document).ready(function(){
         $("head").append("<link rel='stylesheet' type='text/css' href='/css/css3-ani.css'/>");
         $.getScript('/js/css3-ani.js',function(){});
     }
+
+    (function lastModifedTime() {
+      var $lm = $('span.lastModified');
+      $.ajax({
+        url: 'https://api.github.com/repos/liyu1981/liyu1981.github.io/commits?path=/' + $lm.data('source'),
+        method: 'GET',
+        contentType: 'application/json',
+        success: function(data) {
+          console.log('got data,', data);
+          if (Object.prototype.toString.call(data) === '[object Array]' && data.length > 1) {
+            $lm.append((new Date(Date.parse(data[0].commit.committer.date))).toLocaleString()).show(0);
+          }
+        }
+      });
+    })();
 });

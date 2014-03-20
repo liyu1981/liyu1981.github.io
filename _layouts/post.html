@@ -25,8 +25,8 @@ layout: default
     <div class="avatar circle" style="width: 150px; height: 150px; position: absolute; left: 645px; top: 15px; z-index: 99;">
       <div class="center" style="margin-top: 4px; height: 142px; width: 142px; border-radius: 71px; background-image: url('https://secure.gravatar.com/avatar/6a1f8a9d412c8e54bed896135c6f7d0c?s=142');"></div>
     </div>
-         <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
-        <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
+        <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
+        <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }} <span class="lastModified" style="display: none;" data-source="{{ page.path }}">最后更新时间: </span></p>
         {{ content }}
 
         <div id="disqus_container">
