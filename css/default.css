@@ -80,16 +80,14 @@ pre ol{margin-left:25px;list-style-type:decimal;}
     background-position:50% 50%;
 }
 
-.avatar {
-  cursor: pointer;
-}
+.avatar { cursor: pointer; }
 
 .circle {
-    background: #fff;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    box-shadow: 0 0 3px #444;
+  background: #fff;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0 0 3px #444;
 }
 
 .center {
@@ -176,7 +174,6 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     .project .aside,
     .opinion .aside {display:none;background-image:none;}
 }
-
 @media (max-width: 1020px){
     #menuIndex {display:none;}
     .home-menu { position:absolute; }

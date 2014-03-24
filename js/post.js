@@ -135,64 +135,56 @@ $(document).ready(function(){
             genIndex();
 
             $(window).load(function(){
-                var scrollTop = [];
-                $.each($('#menuIndex li a'),function(index,item){
-                    var selector = $(item).attr('data-id') ? '#'+$(item).attr('data-id') : 'h1'
-                    var top = $(selector).offset().top;
-                    scrollTop.push(top);
+              var scrollTop = [];
+              $.each($('#menuIndex li a'),function(index,item){
+                var selector = $(item).attr('data-id') ? '#'+$(item).attr('data-id') : 'h1'
+                var top = $(selector).offset().top;
+                scrollTop.push(top);
+              });
+
+              var menuIndexTop = $('#menuIndex').offset().top;
+              var menuIndexLeft = $('#menuIndex').offset().left;
+
+              $(window).scroll(function(){
+                waitForFinalEvent(function(){
+                  var nowTop = $(window).scrollTop();
+                  var length = scrollTop.length;
+                  var index;
+
+                  if(nowTop+20 > menuIndexTop){
+                    $('#menuIndex').css({ position:'fixed' ,top:'20px' ,left:menuIndexLeft });
+                  }else{
+                    $('#menuIndex').css({ position:'static' ,top:0 ,left:0 });
+                  }
+
+                  if(nowTop+60 > scrollTop[length-1]){
+                    index = length;
+                  }else{
+                    for(var i=0;i<length;i++){
+                      if(nowTop+60 <= scrollTop[i]){
+                        index = i;
+                        break;
+                      }
+                    }
+                  }
+                  $('#menuIndex li').removeClass('on');
+                  $('#menuIndex li').eq(index-1).addClass('on');
                 });
+              });
 
-                var menuIndexTop = $('#menuIndex').offset().top;
-                var menuIndexLeft = $('#menuIndex').offset().left;
-
-                $(window).scroll(function(){
-                    waitForFinalEvent(function(){
-                        var nowTop = $(window).scrollTop();
-                        var length = scrollTop.length;
-                        var index;
-
-                        if(nowTop+20 > menuIndexTop){
-                            $('#menuIndex').css({
-                                position:'fixed'
-                                ,top:'20px'
-                                ,left:menuIndexLeft
-                            });
-                        }else{
-                            $('#menuIndex').css({
-                                position:'static'
-                                ,top:0
-                                ,left:0
-                            });
-                        }
-
-                        if(nowTop+60 > scrollTop[length-1]){
-                            index = length;
-                        }else{
-                            for(var i=0;i<length;i++){
-                                if(nowTop+60 <= scrollTop[i]){
-                                    index = i;
-                                    break;
-                                }
-                            }
-                        }
-                        $('#menuIndex li').removeClass('on');
-                        $('#menuIndex li').eq(index-1).addClass('on');
-                    });
-                });
-
-                $(window).resize(function(){
-                    $('#menuIndex').css({
-                        position:'static'
+              $(window).resize(function(){
+                $('#menuIndex').css({
+                  position:'static'
                         ,top:0
                         ,left:0
-                    });
-
-                    menuIndexTop = $('#menuIndex').offset().top;
-                    menuIndexLeft = $('#menuIndex').offset().left;
-
-                    $(window).trigger('scroll')
-                    $('#menuIndex').css('max-height',$(window).height()-80);
                 });
+
+                menuIndexTop = $('#menuIndex').offset().top;
+                menuIndexLeft = $('#menuIndex').offset().left;
+
+                $(window).trigger('scroll')
+                $('#menuIndex').css('max-height',$(window).height()-80);
+              });
             })
 
             //用js计算屏幕的高度
@@ -206,11 +198,6 @@ $(document).ready(function(){
 
     if(/\#comment/.test(location.hash)){
         $('#disqus_container .comment').trigger('click');
-    }
-
-    if(/css3-animation/.test(location.href)){
-        $("head").append("<link rel='stylesheet' type='text/css' href='/css/css3-ani.css'/>");
-        $.getScript('/js/css3-ani.js',function(){});
     }
 
     (function lastModifedTime() {
