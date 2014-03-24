@@ -4,7 +4,10 @@ layout: home
 
 <div class="index-content blog">
     <div class="section">
-        <div class="cate-bar"><span id="cateBar"></span></div>
+        <div class="cate-bar">
+          <a href="http://www.linkedin.com/pub/yu-li/6/3a4/499"><i class="icon-linkedin-sign icon-large"></i><span> Profile</span></a>
+          <a href="http://www.github.com/liyu1981?tab=repositories"><i class="icon-github icon-large"></i><span> Code</span></a>
+        </div>
         <ul class="artical-list">
         {% for post in site.categories.blog %}
             <li><div class="title-date">{{ post.date | date:"%Y-%m-%d" }}</div>

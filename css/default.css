@@ -27,7 +27,7 @@ body .hide{display:none;}
 
 
 /***********default settings**********/
-body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px; background-color: #f7f7f7; }
+body {font-family: "Lato","微软雅黑", "sans-serif";font-size:16px; background-color: #f7f7f7; }
 a {color:#4A75B5;text-decoration:none;outline:none;}
 a:hover {text-decoration:underline}
 a.external {padding-right:13px;background:url('/images/icons.gif') no-repeat right 1px;}
@@ -112,7 +112,9 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .index-content .artical-cate li a:hover { text-decoration:none; }
 .index-content .artical-cate li.on span{ color:red; }
 
-.index-content .cate-bar { height:3px; width:70%; margin:0 auto;margin-bottom:100px; }
+.index-content .cate-bar { width:70%; margin:0 auto; line-height: 100px; text-align: right; color: #999; }
+.index-content .cate-bar a { margin: auto 20px; color: #999; }
+.index-content .cate-bar a:hover { color: #4a75b5; text-decoration: none; }
 .index-content #cateBar { display:inline-block; zoom:1; height:3px; background:red; position:relative; width:0; }
 
 /***************Wiki Style*****************/
@@ -130,6 +132,9 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 
 /**************目录导航**************/
 #menuIndex {overflow:auto;}
+#menuIndex .myinfo { border-bottom: 1px dashed #999; margin-bottom: 10px; padding-bottom: 10px; }
+#menuIndex .myinfo a { display: inline-block; margin: auto 5px;}
+#menuIndex .myinfo a:hover { color: #4A75B5; }
 #menuIndex a {display:block; padding:2px 0; }
 #menuIndex a:hover {text-decoration:none;}
 #menuIndex ul {margin-bottom:10px;}

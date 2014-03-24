@@ -54,86 +54,75 @@ $(document).ready(function(){
             var h2 = [];
             var h3 = [];
             var h2index = 0;
-
-            $.each($('.entry h2, .entry h3'),function(index,item){
-                if(item.tagName.toLowerCase() == 'h2'){
-                    var h2item = {};
-                    h2item.name = $(item).text();
-                    h2item.id = 'menuIndex'+index;
-                    h2.push(h2item);
-                    h2index++;
-                }else{
-                    var h3item = {};
-                    h3item.name = $(item).text();
-                    h3item.id = 'menuIndex'+index;
-                    if(!h3[h2index-1]){
-                        h3[h2index-1] = [];
-                    }
-                    h3[h2index-1].push(h3item);
+            $.each($('.entry h2, .entry h3'), function(index,item){
+              if(item.tagName.toLowerCase() == 'h2') {
+                var h2item = {};
+                h2item.name = $(item).text();
+                h2item.id = 'menuIndex'+index;
+                h2.push(h2item);
+                h2index++;
+              } else {
+                var h3item = {};
+                h3item.name = $(item).text();
+                h3item.id = 'menuIndex'+index;
+                if(!h3[h2index-1]) {
+                  h3[h2index-1] = [];
                 }
-                item.id = 'menuIndex' + index;
+                h3[h2index-1].push(h3item);
+              }
+              item.id = 'menuIndex' + index;
             });
-
-            return {h2:h2,h3:h3}
+            return { h2: h2, h3: h3 };
         }
 
         function genTmpl(){
-            var h1txt = $('h1').text();
-            var tmpl = '<ul><li class="h1"><a href="#">' + h1txt + '</a></li>';
-
-            var heading = initHeading();
-            var h2 = heading.h2;
-            var h3 = heading.h3;
-
-            for(var i=0;i<h2.length;i++){
-                tmpl += '<li><a href="#" data-id="'+h2[i].id+'">'+h2[i].name+'</a></li>';
-
-                if(h3[i]){
-                    for(var j=0;j<h3[i].length;j++){
-                        tmpl += '<li class="h3"><a href="#" data-id="'+h3[i][j].id+'">'+h3[i][j].name+'</a></li>';
-                    }
-                }
+          var h1txt = $('h1').text();
+          var tmpl = '<ul><li class="h1"><a class="menuItem" href="#">' + h1txt + '</a></li>';
+          var heading = initHeading();
+          var h2 = heading.h2;
+          var h3 = heading.h3;
+          for(var i=0;i<h2.length;i++){
+            tmpl += '<li><a href="#" class="menuItem" data-id="'+h2[i].id+'">'+h2[i].name+'</a></li>';
+            if(h3[i]){
+              for(var j=0;j<h3[i].length;j++){
+                tmpl += '<li class="h3"><a href="#" class="menuItem" data-id="'+h3[i][j].id+'">'+h3[i][j].name+'</a></li>';
+              }
             }
-            tmpl += '</ul>';
-
-            return tmpl;
+          }
+          tmpl += '</ul>';
+          return tmpl;
         }
 
         function genIndex(){
             var tmpl = genTmpl();
-            var indexCon = '<div id="menuIndex" class="sidenav"><h2>目录</h2></div>';
-
-            $('#content').append(indexCon);
-
+            var indexCon = '<h2>目录</h2>';
+            //$('#content').append(indexCon);
             $('#menuIndex')
+                .append(indexCon)
                 .append($(tmpl))
-                .delegate('a','click',function(e){
-                    e.preventDefault();
-
-                    var selector = $(this).attr('data-id') ? '#'+$(this).attr('data-id') : 'h1'
-                    var scrollNum = $(selector).offset().top;
-
-                    $('body, html').animate({ scrollTop: scrollNum-30 }, 400, 'swing');
+                .delegate('a.menuItem', 'click', function(e) {
+                  e.preventDefault();
+                  var selector = $(this).attr('data-id') ? '#'+$(this).attr('data-id') : 'h1'
+                  var scrollNum = $(selector).offset().top;
+                  $('body, html').animate({ scrollTop: scrollNum-30 }, 400, 'swing');
                 });
         }
 
         var waitForFinalEvent = (function () {
-            var timers = {};
-            return function (callback, ms, uniqueId) {
-                if (!uniqueId) {
-                    uniqueId = "Don't call this twice without a uniqueId";
-                }
-                if (timers[uniqueId]) {
-                    clearTimeout (timers[uniqueId]);
-                }
-                timers[uniqueId] = setTimeout(callback, ms);
-            };
+          var timers = {};
+          return function (callback, ms, uniqueId) {
+            if (!uniqueId) {
+              uniqueId = "Don't call this twice without a uniqueId";
+            }
+            if (timers[uniqueId]) {
+              clearTimeout (timers[uniqueId]);
+            }
+            timers[uniqueId] = setTimeout(callback, ms);
+          };
         })();
 
-        if($('.entry h2').length > 2 && !isMobile.any() && !ie6){
-
+        if($('.entry h2').length > 2 && !isMobile.any() && !ie6) {
             genIndex();
-
             $(window).load(function(){
               var scrollTop = [];
               $.each($('#menuIndex li a'),function(index,item){
@@ -173,15 +162,9 @@ $(document).ready(function(){
               });
 
               $(window).resize(function(){
-                $('#menuIndex').css({
-                  position:'static'
-                        ,top:0
-                        ,left:0
-                });
-
+                $('#menuIndex').css({ position:'static', top:0, left:0 });
                 menuIndexTop = $('#menuIndex').offset().top;
                 menuIndexLeft = $('#menuIndex').offset().left;
-
                 $(window).trigger('scroll')
                 $('#menuIndex').css('max-height',$(window).height()-80);
               });
@@ -192,12 +175,10 @@ $(document).ready(function(){
         }
     })();
 
-    $.getScript('/js/prettify/prettify.js',function(){
-        prettyPrint();
-    });
+    $.getScript('/js/prettify/prettify.js',function(){ prettyPrint(); });
 
     if(/\#comment/.test(location.hash)){
-        $('#disqus_container .comment').trigger('click');
+      $('#disqus_container .comment').trigger('click');
     }
 
     (function lastModifedTime() {
@@ -207,10 +188,29 @@ $(document).ready(function(){
         method: 'GET',
         contentType: 'application/json',
         success: function(data) {
-          console.log('got data,', data);
           if (Object.prototype.toString.call(data) === '[object Array]' && data.length > 1) {
             $lm.append((new Date(Date.parse(data[0].commit.committer.date))).toLocaleString()).show(0);
           }
+        }
+      });
+    })();
+
+    (function avatarScroll() {
+      var ah = $('div#avatarHolder');
+      var a = $('div#avatar');
+      $(document).scroll(function() {
+        var st = $(document).scrollTop();
+        console.log('st is:', st);
+        if (st > 20 && !a.data('in-right')) {
+          a.data('in-right', true);
+          ah.transition({ width: 150, height: 150 }, function() {
+            a.transition({ left: 953 });
+          });
+        } else if (st < 20 && a.data('in-right')) {
+          a.data('in-right', false);
+          a.transition({ left: 753 }, function() {
+            ah.transition({ width: 0, height: 0 });
+          });
         }
       });
     })();

@@ -13,16 +13,16 @@ layout: default
     }
     body { background:transparent; }
     @media screen and (max-width: 750px){
-        body { background:#fff; }
+      body { background:#fff; }
     }
     @media screen and (max-width: 1020px){
-        body { background:#fff; }
+      body { background:#fff; }
     }
 </style>
 
 <div id="content" style="margin-top: 20px;">
   <div class="entry" style="position: relative;">
-    <div class="avatar circle" style="width: 150px; height: 150px; position: absolute; left: 645px; top: 15px; z-index: 99;">
+    <div id="avatar" class="avatar circle" data-in-right="false" style="width: 150px; height: 150px; position: fixed; left: 753px; top: 40px; z-index: 99;">
       <div class="center" style="margin-top: 4px; height: 142px; width: 142px; border-radius: 71px; background-image: url('https://secure.gravatar.com/avatar/6a1f8a9d412c8e54bed896135c6f7d0c?s=142');"></div>
     </div>
 
@@ -50,6 +50,14 @@ layout: default
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       </div>
     </div>
+  </div>
+  <div id="menuIndex" class="sidenav">
+    <div class="myinfo"><center>
+      <div id="avatarHolder" class="avatar circle" style="width: 0px; height: 0px; box-shadow: none; margin-bottom: 20px;"></div>
+      <a href="/index.html" title="Homepage"><i class="icon-home icon-large"></i> Home</a>
+      <a href="http://www.linkedin.com/pub/yu-li/6/3a4/499" title="Who am I?"><i class="icon-linkedin-sign icon-large"></i> Profile</a>
+      <a href="http://www.github.com/liyu1981?tab=repositories" title="What do I do?"><i class="icon-github icon-large"></i> Code</a>
+    </center></div>
   </div>
 </div>
 
