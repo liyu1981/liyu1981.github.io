@@ -33,20 +33,20 @@ prose:
   media: "images"
   metadata:
     _posts/blog:
-      - name: "description"
-        field:
-          element: "text"
-          label: "description"
-          value: ""
-          placeholder: "Input your abstract here"
-          type: "text"
-
       - name: "title"
         field:
           element: "text"
-          label: "title"
+          label: "Title"
           value: ""
           placeholder: "Input your title here"
+          type: "text"
+
+      - name: "description"
+        field:
+          element: "text"
+          label: "Description"
+          value: ""
+          placeholder: "Input your abstract here"
           type: "text"
 
       - name: "layout"
