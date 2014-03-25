@@ -32,7 +32,7 @@ prose:
   siteurl: "http://liyu1981.github.io/"
   media: "images"
   metadata:
-    _posts:
+    _posts/blog:
       - name: "layout"
         field:
           element: "hidden"
@@ -42,18 +42,19 @@ prose:
           element: "text"
           label: "title"
           value: ""
+          placeholder: "Input your title here"
           type: "text"
       - name: "description"
         field:
           element: "textarea"
           label: "description"
           value: ""
+          placeholder: "Input your abstract here"
           type: "text"
       - name: "published"
         field:
           element: "hidden"
           value: "true"
-    _posts/blog:
       - name: "category"
         field:
           element: "hidden"
