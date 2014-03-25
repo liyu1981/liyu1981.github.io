@@ -43,7 +43,7 @@ $(document).ready(function(){
       function genIndex(){
         var tmpl = genTmpl();
         var indexCon = '<h2>目录</h2>';
-        $('#menuIndex').append(indexCon).append($(tmpl))
+        $('#menuIndex #menu').append(indexCon).append($(tmpl))
           .delegate('a.menuItem', 'click', function(e) {
             e.preventDefault();
             var selector = $(this).attr('data-id') ? '#'+$(this).attr('data-id') : 'h1'
@@ -54,49 +54,51 @@ $(document).ready(function(){
 
       if($('.entry h2').length > 2 && !isMobile.any() && !ie6) {
         genIndex();
-        $(window).load(function(){
-          var scrollTop = [];
-          $.each($('#menuIndex li a'),function(index,item){
-            var selector = $(item).attr('data-id') ? '#'+$(item).attr('data-id') : 'h1'
-            var top = $(selector).offset().top;
-            scrollTop.push(top);
-          });
-          var menuIndexTop = $('#menuIndex').offset().top;
-          var menuIndexLeft = $('#menuIndex').offset().left;
-          $(window).scroll(function() {
-            waitForFinalEvent(function() {
-              var nowTop = $(window).scrollTop();
-              var length = scrollTop.length;
-              var index;
-              if(nowTop+20 > menuIndexTop){
-                $('#menuIndex').css({ position:'fixed', top:'20px', left:menuIndexLeft });
-              } else {
-                $('#menuIndex').css({ position:'static', top:0, left:0 });
-              }
-              if(nowTop+60 > scrollTop[length-1]) {
-                index = length;
-              } else {
-                for(var i=0; i < length; i++) {
-                  if(nowTop+60 <= scrollTop[i]) {
-                    index = i;
-                    break;
+        if ($(window).width() > 750) {
+          $(window).load(function(){
+            var scrollTop = [];
+            $.each($('#menuIndex li a'),function(index,item){
+              var selector = $(item).attr('data-id') ? '#'+$(item).attr('data-id') : 'h1'
+              var top = $(selector).offset().top;
+              scrollTop.push(top);
+            });
+            var menuIndexTop = $('#menuIndex').offset().top;
+            var menuIndexLeft = $('#menuIndex').offset().left;
+            $(window).scroll(function() {
+              waitForFinalEvent(function() {
+                var nowTop = $(window).scrollTop();
+                var length = scrollTop.length;
+                var index;
+                if(nowTop+20 > menuIndexTop){
+                  $('#menuIndex').css({ position:'fixed', top:'20px', left:menuIndexLeft });
+                } else {
+                  $('#menuIndex').css({ position:'static', top:0, left:0 });
+                }
+                if(nowTop+60 > scrollTop[length-1]) {
+                  index = length;
+                } else {
+                  for(var i=0; i < length; i++) {
+                    if(nowTop+60 <= scrollTop[i]) {
+                      index = i;
+                      break;
+                    }
                   }
                 }
-              }
-              $('#menuIndex li').removeClass('on');
-              $('#menuIndex li').eq(index-1).addClass('on');
+                $('#menuIndex li').removeClass('on');
+                $('#menuIndex li').eq(index-1).addClass('on');
+              });
             });
-          });
-          $(window).resize(function(){
-            $('#menuIndex').css({ position:'static', top:0, left:0 });
-            menuIndexTop = $('#menuIndex').offset().top;
-            menuIndexLeft = $('#menuIndex').offset().left;
-            $(window).trigger('scroll')
-            $('#menuIndex').css('max-height',$(window).height()-80);
-          });
-        })
-        // calculate window height
-        $('#menuIndex').css('max-height',$(window).height()-80);
+            $(window).resize(function(){
+              $('#menuIndex').css({ position:'static', top:0, left:0 });
+              menuIndexTop = $('#menuIndex').offset().top;
+              menuIndexLeft = $('#menuIndex').offset().left;
+              $(window).trigger('scroll')
+              $('#menuIndex').css('max-height',$(window).height()-80);
+            });
+          })
+          // calculate window height
+          $('#menuIndex').css('max-height',$(window).height()-80);
+        }
       }
     })();
 
@@ -121,23 +123,31 @@ $(document).ready(function(){
     (function setupAvatar() {
       var ah = $('div#avatarHolder');
       var a = $('div#avatar');
-      var pos1left = $('div#menuIndex').offset().left - 145;
-      var pos2left = $('div#menuIndex').offset().left + 65;
-      $(document).scroll(function() {
-        var st = $(document).scrollTop();
-        if (st > 20 && !a.data('in-right')) {
-          a.data('in-right', true);
-          ah.transition({ width: 150, height: 150 }, function() {
-            a.transition({ left: pos2left });
-          });
-        } else if (st < 20 && a.data('in-right')) {
-          a.data('in-right', false);
-          a.transition({ left: pos1left }, function() {
-            ah.transition({ width: 0, height: 0 });
-          });
-        }
-      });
 
-      a.transition({ left: pos1left, scale: 2.5 }).transition({ opacity: 1, scale: 1 }, 800, 'ease');
+      if ($(window).width() > 750) {
+        var pos1left = $('div#menuIndex').offset().left - 145;
+        var pos2left = $('div#menuIndex').offset().left + 65;
+        $(document).scroll(function() {
+          var st = $(document).scrollTop();
+          if (st > 20 && !a.data('in-right')) {
+            a.data('in-right', true);
+            ah.transition({ width: 150, height: 150 }, function() {
+              a.transition({ left: pos2left });
+            });
+          } else if (st < 20 && a.data('in-right')) {
+            a.data('in-right', false);
+            a.transition({ left: pos1left }, function() {
+              ah.transition({ width: 0, height: 0 });
+            });
+          }
+        });
+        a.transition({ left: pos1left, scale: 2.5 }).transition({ opacity: 1, scale: 1 }, 800, 'ease');
+      } else {
+        ah.transition({ 'margin-top': 10 }).transition({ width: 100, height: 100 }, function() {
+          $('div.entry').transition({ 'margin-top': $('div#menuIndex').outerHeight() });
+          var pos1left = ah.offset().left;
+          a.transition({ 'margin-top': 10, left: pos1left, scale: 2.5 }).transition({ opacity: 1, scale: 1 }, 800, 'ease');
+        });
+      }
     })();
 });

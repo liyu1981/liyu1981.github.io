@@ -13,19 +13,16 @@ layout: default
   }
   body { background:transparent; }
   @media screen and (max-width: 750px){
-    body { background:#fff; }
-  }
-  @media screen and (max-width: 1020px){
-    body { background:#fff; }
+    body { background: rgba(255, 255, 255, 0.9); }
   }
 </style>
 
-<div id="content" style="margin-top: 20px;">
-  <div class="entry" style="position: relative;">
-    <div id="avatar" class="avatar circle" data-in-right="false" style="width: 150px; height: 150px; position: fixed; top: 40px; z-index: 99; opacity: 0;">
-      <div class="center" style="margin-top: 4px; height: 142px; width: 142px; border-radius: 71px; background-image: url('https://secure.gravatar.com/avatar/{{ site.myblog.gavatar }}?s=142');"></div>
-    </div>
+<div id="content" class="post" style="margin-top: 20px;">
+  <div id="avatar" class="avatar circle" data-in-right="false" style="width: 150px; height: 150px; position: fixed; top: 40px; z-index: 99; opacity: 0;">
+    <div class="center" style="margin-top: 4px; height: 142px; width: 142px; border-radius: 71px; background-image: url('https://secure.gravatar.com/avatar/{{ site.myblog.gavatar }}?s=142');"></div>
+  </div>
 
+  <div class="entry" style="position: relative;">
     <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
 
     <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }} <span class="lastModified" style="display: none;" data-source="{{ page.path }}">最后更新时间: </span></p>
@@ -58,6 +55,7 @@ layout: default
       <a href="http://www.linkedin.com/pub/yu-li/6/3a4/499" title="Who am I?"><i class="icon-linkedin-sign icon-large"></i> Profile</a>
       <a href="http://www.github.com/liyu1981?tab=repositories" title="What do I do?"><i class="icon-github icon-large"></i> Code</a>
     </center></div>
+    <div id="menu"></div>
   </div>
 </div>
 
