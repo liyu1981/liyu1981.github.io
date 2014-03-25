@@ -40,11 +40,11 @@ prose:
       - name: "title"
         field:
           element: "text"
-          placeholder: "输入标题"
+          label: "title"
       - name: "description"
         field:
           element: "textarea"
-          placeholder: "输入摘要"
+          label: "description"
       - name: "published"
         field:
           element: "hidden"
