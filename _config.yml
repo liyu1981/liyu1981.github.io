@@ -35,7 +35,7 @@ prose:
     _posts/blog:
       - name: "title"
         field:
-          element: "text"
+          element: "textarea"
           label: "Title"
           value: ""
           placeholder: "Input your title here"
@@ -43,7 +43,7 @@ prose:
 
       - name: "description"
         field:
-          element: "text"
+          element: "textarea"
           label: "Description"
           value: ""
           placeholder: "Input your abstract here"
