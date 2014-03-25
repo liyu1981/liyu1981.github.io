@@ -46,7 +46,7 @@ prose:
           type: "text"
       - name: "description"
         field:
-          element: "textarea"
+          element: "text"
           label: "description"
           value: ""
           placeholder: "Input your abstract here"
