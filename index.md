@@ -24,10 +24,11 @@ layout: home
           return all[Math.floor((Math.random()*all.length))];
         }
         $('div.aside').css('background-image', geturl());
+        $('div#avatar').transition({ scale: 2.5 }).transition({ opacity: 1, scale: 1 }, 800, 'ease');
       });
     </script>
     <div class="aside">
-      <div class="avatar circle" style="width: 150px; height: 150px; position: absolute; right: -75px; top: 75px;">
+      <div id="avatar" class="avatar circle" style="width: 150px; height: 150px; position: absolute; right: -75px; top: 75px; opacity: 0;">
         <div class="center" style="margin-top: 4px; height: 142px; width: 142px; border-radius: 71px; background-image: url('https://secure.gravatar.com/avatar/{{ site.myblog.gavatar }}?s=142')"></div>
       </div>
     </div>
