@@ -25,8 +25,6 @@ myblog:
     'url("http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-MpHzMZ7/0/X3/IMG_1448-X3.jpg")'
   postbgimg: http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-wLzDhDC/0/X3/R0018155-X3.jpg
 
-
-# prose confs
 prose:
   rooturl: "_posts"
   siteurl: "http://liyu1981.github.io/"
@@ -35,7 +33,7 @@ prose:
     _posts/blog:
       - name: "title"
         field:
-          element: "textarea"
+          element: "text"
           label: "Title"
           value: ""
           placeholder: "Input your title here"
@@ -43,7 +41,7 @@ prose:
 
       - name: "description"
         field:
-          element: "textarea"
+          element: "text"
           label: "Description"
           value: ""
           placeholder: "Input your abstract here"
