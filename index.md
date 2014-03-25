@@ -29,7 +29,7 @@ layout: home
     </script>
     <div class="aside">
       <div id="avatar" class="avatar circle" style="width: 150px; height: 150px; position: absolute; right: -75px; top: 75px; opacity: 0;">
-        <div class="center" style="margin-top: 4px; height: 142px; width: 142px; border-radius: 71px; background-image: url('https://secure.gravatar.com/avatar/{{ site.myblog.gavatar }}?s=142')"></div>
+        <div class="center circle" style="margin-top: 4px; height: 142px; width: 142px; background-image: url('https://secure.gravatar.com/avatar/{{ site.myblog.gavatar }}?s=142')"></div>
       </div>
     </div>
 </div>
