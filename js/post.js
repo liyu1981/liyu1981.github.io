@@ -69,9 +69,9 @@ $(document).ready(function(){
               var length = scrollTop.length;
               var index;
               if(nowTop+20 > menuIndexTop){
-                $('#menuIndex').css({ position:'fixed' ,top:'20px' ,left:menuIndexLeft });
+                $('#menuIndex').css({ position:'fixed', top:'20px', left:menuIndexLeft });
               } else {
-                $('#menuIndex').css({ position:'static' ,top:0 ,left:0 });
+                $('#menuIndex').css({ position:'static', top:0, left:0 });
               }
               if(nowTop+60 > scrollTop[length-1]) {
                 index = length;

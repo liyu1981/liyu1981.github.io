@@ -7,7 +7,6 @@
   h3{font-size:16px;}
   embed {display:none;}
 
-  /*
   .entry-title,.entry-title a {font-size:24px;}
   .entry-date {margin-bottom:20px;}
   .entry img{max-width:90%;}
@@ -15,7 +14,6 @@
   .entry pre code{line-height:1em;font-size:12px;}
   .sidenav {display:none;}
   .entry {float:none;width:auto;background:transparent;padding:0;box-shadow:none;}
-  */
 
   .index-content .section { margin: 0px auto; padding-right:0; z-index: 99; background-color: transparent; position: fixed; top: 0px; left: 0px; }
   .index-content .section  { margin-left: 5%; margin-right: 5%; width:90%; }
@@ -26,7 +24,6 @@
   .index-content .title-date { color: #eee; }
   .index-content h2 a { color:#fff; }
   .index-content .title-desc { color:#eee; }
-
 
   .blog .aside, .project .aside, .opinion .aside { position: fixed; height: 100%; width: 100%; top: 0px; z-index: 0; }
   .aside .avatar { width: 100px !important; height: 100px !important; left: 10px; top: 15px !important;}
