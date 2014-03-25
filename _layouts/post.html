@@ -5,7 +5,7 @@ layout: default
 <link rel="stylesheet" href="/js/prettify/prettify.css" />
 <style type="text/css">
     html {
-      background: url(http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-wLzDhDC/0/X3/R0018155-X3.jpg) no-repeat center center fixed;
+      background: url({{ site.myblog.postbgimg }}) no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -22,8 +22,8 @@ layout: default
 
 <div id="content" style="margin-top: 20px;">
   <div class="entry" style="position: relative;">
-    <div id="avatar" class="avatar circle" data-in-right="false" style="width: 150px; height: 150px; position: fixed; left: 753px; top: 40px; z-index: 99;">
-      <div class="center" style="margin-top: 4px; height: 142px; width: 142px; border-radius: 71px; background-image: url('https://secure.gravatar.com/avatar/6a1f8a9d412c8e54bed896135c6f7d0c?s=142');"></div>
+    <div id="avatar" class="avatar circle" data-in-right="false" style="width: 150px; height: 150px; position: fixed; top: 40px; z-index: 99; opacity: 0;">
+      <div class="center" style="margin-top: 4px; height: 142px; width: 142px; border-radius: 71px; background-image: url('https://secure.gravatar.com/avatar/{{ site.myblog.gavatar }}?s=142');"></div>
     </div>
 
     <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>

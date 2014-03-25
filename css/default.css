@@ -30,8 +30,7 @@ body .hide{display:none;}
 body {font-family: "Lato","微软雅黑", "sans-serif";font-size:16px; background-color: #f7f7f7; }
 a {color:#4A75B5;text-decoration:none;outline:none;}
 a:hover {text-decoration:underline}
-a.external {padding-right:13px;background:url('/images/icons.gif') no-repeat right 1px;}
-a.external:hover {background-position:right -15px;}
+a.external:after { content: ' \f08e'; font-family: 'FontAwesome'; font-size: 80%; }
 .entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#000;text-align:left;word-wrap: break-word; }
 .entry-title a:hover {text-decoration:none;}
 .entry-date {text-align:left;color:#999;margin-bottom:40px;font-size:14px;border-bottom:1px dashed #999;}
@@ -52,7 +51,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 
 
 /****************entry style**************/
-.sidenav { width:240px; background:#fff; float:right; padding:20px; margin-bottom:50px; box-shadow:0 1px 4px #ccc; border-radius: 6px;}
+.sidenav { width:240px; background:#fff; float:right; padding:20px; margin-bottom:50px; box-shadow:0 1px 4px #ccc; border-radius: 6px; opacity: 0.9; }
 .sidenav h2 { font-size:18px; color:#333; margin-bottom:15px; }
 .sidenav ul { margin-bottom:50px; }
 .sidenav li { margin-bottom:12px; word-break: break-all;}
@@ -79,8 +78,6 @@ pre ol{margin-left:25px;list-style-type:decimal;}
     background-size:cover;
     background-position:50% 50%;
 }
-
-.avatar { cursor: pointer; }
 
 .circle {
   background: #fff;
