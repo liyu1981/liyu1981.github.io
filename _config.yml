@@ -24,3 +24,33 @@ myblog:
     'url("http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-3mqdZgt/0/X3/IMG_2301-X3.jpg")',
     'url("http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-MpHzMZ7/0/X3/IMG_1448-X3.jpg")'
   postbgimg: http://liyu1981.smugmug.com/Photography/365-days-365-photos/i-wLzDhDC/0/X3/R0018155-X3.jpg
+
+
+# prose confs
+prose:
+  rooturl: "_posts"
+  siteurl: "http://liyu1981.github.io/"
+  media: "images"
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          placeholder: "输入标题"
+      - name: "description"
+        field:
+          element: "textarea"
+          placeholder: "输入摘要"
+      - name: "published"
+        field:
+          element: "hidden"
+          value: "true"
+    _posts/blog:
+      - name: "category"
+        field:
+          element: "hidden"
+          value: "blog"
