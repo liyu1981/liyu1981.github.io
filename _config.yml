@@ -41,10 +41,14 @@ prose:
         field:
           element: "text"
           label: "title"
+          value: ""
+          type: "text"
       - name: "description"
         field:
           element: "textarea"
           label: "description"
+          value: ""
+          type: "text"
       - name: "published"
         field:
           element: "hidden"
