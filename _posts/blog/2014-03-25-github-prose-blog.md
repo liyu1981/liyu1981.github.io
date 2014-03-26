@@ -63,8 +63,38 @@ description: github jekyll静态页面自动生成，沉浸式的书写体验，
 
 怎样设置好github pages，再把jekyll配置好，教程已有不少，比如[这个](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)，还有[这个](http://sanvibyfish.github.io/posts/githubpage/)，以及我参考的[这个](http://beiyuu.com/github-pages/)。
 
-看起来都很简单，实际上做起来，你懂得。
+看起来都很简单，实际上做起来往往又不是那么尽如人意，你懂得。
+
+> 老湿，能不能再给力一点？copy paste如何？
+
+这个要求不是不可以满足，如果实在对个性化没什么要求，这儿有个123的方案
+
+1. 我准备了一个模板，fork它
+> 首先当然你要有一个github账号，没有也没有关系，会提示你创建的。
+
+2. 去github界面上把repo的名字改成 <你的名字>.github.io 
+> github修改repo名字就是在repo页面上点那个setting，第一个选项卡就有。这里[有图有真相](https://help.github.com/articles/renaming-a-repository)。
+
+3. 修改一下repo根目录下_config.yml里面一些信息
+
+```yaml
+myblog:
+  gavatar: 你email地址的md5值
+  gpname: github账号的名字
+  linkedin: linkedin链接
+  github: github链接
+  coverimgs: index页右侧的背景图数组，替换下http那部分，没有就留个[]
+  postbgimg: blog post页的背景图url
+```
+
+做人不是很讲究的话，这就算是搞完了（当然，美化这种事情是永恒的，我懂得，以后随意改）
 
 ### 设置prose.io
+
+prose.io总的来说没什么配置的，不配置也行，直接访问[http://prose.io](http://prose.io) ，授权就行了。
+
+如果要配置，基本上就是在_config.yml里面添加一些个prose.io用的配置，基本上可以[参考这里]()。
+
+如果是从我给的模板fork的，那就不用修改了，已经配置好了。
 
 ## Prose.io使用上的注意事项
