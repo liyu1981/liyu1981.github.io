@@ -48,4 +48,8 @@ description: github jekyll静态页面自动生成，沉浸式的书写体验，
 
 当然，因为它是github pages，所以clone，vim随便写一个很复杂的演示什么的，自然是无比强大。想备份，git clone，想观察更改记录，github的web界面就可以用。
 
+总之，如果你是程序猿，没有比这个更加合适的了。
+
 ## 怎样弄一个
+
+## Prose.io使用上的注意事项
