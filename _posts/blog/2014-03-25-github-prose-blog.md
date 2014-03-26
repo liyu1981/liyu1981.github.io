@@ -46,10 +46,25 @@ description: github jekyll静态页面自动生成，沉浸式的书写体验，
 
 点击完毕提交，boom，commit到github，github pages通过hook就自动生成了静态页面，就这么简单。
 
-当然，因为它是github pages，所以clone，vim随便写一个很复杂的演示什么的，自然是无比强大。想备份，git clone，想观察更改记录，github的web界面就可以用。
+当然，因为它是github pages，所以clone，vim随便写一个很复杂的演示什么的都很容易，无比强大。
+
+想备份，git clone，想观察更改记录，github的web界面就[可以用](https://github.com/liyu1981/liyu1981.github.io/commits/master/_posts/blog/2014-03-25-github-prose-blog.md)。
 
 总之，如果你是程序猿，没有比这个更加合适的了。
 
 ## 怎样弄一个
+
+基本上，包含两个步骤
+
+1. 弄好一个jekyll设置好的github pages
+2. 设置好prose.io
+
+### 设置好github pages
+
+怎样设置好github pages，再把jekyll配置好，教程已有不少，比如[这个](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)，还有[这个](http://sanvibyfish.github.io/posts/githubpage/)，以及我参考的[这个](http://beiyuu.com/github-pages/)。
+
+看起来都很简单，实际上做起来，你懂得。
+
+### 设置prose.io
 
 ## Prose.io使用上的注意事项
