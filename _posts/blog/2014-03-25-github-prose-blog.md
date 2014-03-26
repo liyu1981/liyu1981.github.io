@@ -7,7 +7,7 @@ description: github jekyll静态页面自动生成，沉浸式的书写体验，
 ---
 
 ## Why github pages + prose.io？
- 
+
 一句话：**github jekyll静态页面自动生成，沉浸式的书写体验，git版本控制，夫复何求？**
 
 写Blog是一个很随意的行为，通常人们对写得要求也不高，所以从WordPress到轻博客再到微博，写的是越来越轻，越来越容易。
@@ -35,14 +35,14 @@ description: github jekyll静态页面自动生成，沉浸式的书写体验，
 
 以你现在看到的这个blog为例吧，看起来是这样的
 
-![LI, Yu from 1981 - Google Chrome_162.png](/images/LI, Yu from 1981 - Google Chrome_162.png)
+![LI, Yu from 1981](/images/github-prose-start.png)
 
 点击左上角的Edit之后，进入在线编辑器，是这样的
 
-![Editing _posts-blog-2014-03-25-github-prose-blog.md-2014-03-25-github-prose-blog.md at master · Prose - Google Chrome -2-‎_163.png](/images/Editing _posts-blog-2014-03-25-github-prose-blog.md-2014-03-25-github-prose-blog.md at master · Prose - Google Chrome -2-‎_163.png)
+![Editing _posts-blog-2014-03-25-github-prose-blog.md](/images/github-prose-edit1.png)
 
 完成编写，提交是这样的
-![Editing _posts-blog-2014-03-25-github-prose-blog.md-2014-03-25-github-prose-blog.md at master · Prose - Google Chrome -2-‎_164.png](/images/Editing _posts-blog-2014-03-25-github-prose-blog.md-2014-03-25-github-prose-blog.md at master · Prose - Google Chrome -2-‎_164.png)
+![Editing _posts-blog-2014-03-25-github-prose-blog.md](/images/github-prose-edit2.png)
 
 点击完毕提交，boom，commit到github，github pages通过hook就自动生成了静态页面，就这么简单。
 
