@@ -1,6 +1,8 @@
 ---
+category: blog
 published: false
-title: ""
+layout: post
+title: "天作之和: github pages + prose.io"
 description: github jekyll静态页面自动生成，沉浸式的书写体验，git版本控制，夫复何求？
 ---
 
@@ -28,5 +30,22 @@ description: github jekyll静态页面自动生成，沉浸式的书写体验，
 但是github pages缺少一个简单的编写工具。或者说，没有一个简单的可以在Web上使用的工具。clone到本地，动用jekyll server再加vim，显得太重量，适合做一些比较有创造性的事情，不适合随便写写。
 
 于是prose.io弥补了这个空缺，提供了一个很好的在线github pages编辑工具，问题解决了。
+
+## 看起来怎样
+
+以你现在看到的这个blog为例吧，看起来是这样的
+
+![LI, Yu from 1981 - Google Chrome_162.png](/images/LI, Yu from 1981 - Google Chrome_162.png)
+
+点击左上角的Edit之后，进入在线编辑器，是这样的
+
+![Editing _posts-blog-2014-03-25-github-prose-blog.md-2014-03-25-github-prose-blog.md at master · Prose - Google Chrome -2-‎_163.png](/images/Editing _posts-blog-2014-03-25-github-prose-blog.md-2014-03-25-github-prose-blog.md at master · Prose - Google Chrome -2-‎_163.png)
+
+完成编写，提交是这样的
+![Editing _posts-blog-2014-03-25-github-prose-blog.md-2014-03-25-github-prose-blog.md at master · Prose - Google Chrome -2-‎_164.png](/images/Editing _posts-blog-2014-03-25-github-prose-blog.md-2014-03-25-github-prose-blog.md at master · Prose - Google Chrome -2-‎_164.png)
+
+点击完毕提交，boom，commit到github，github pages通过hook就自动生成了静态页面，就这么简单。
+
+当然，因为它是github pages，所以clone，vim随便写一个很复杂的演示什么的，自然是无比强大。想备份，git clone，想观察更改记录，github的web界面就可以用。
 
 ## 怎样弄一个
