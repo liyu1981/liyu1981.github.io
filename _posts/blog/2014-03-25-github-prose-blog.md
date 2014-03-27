@@ -1,6 +1,6 @@
 ---
 category: blog
-published: false
+published: true
 layout: post
 title: "天作之和: github pages + prose.io"
 description: github jekyll静态页面自动生成，沉浸式的书写体验，git版本控制，夫复何求？
