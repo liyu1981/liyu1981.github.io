@@ -75,17 +75,16 @@ description: github jekyll静态页面自动生成，沉浸式的书写体验，
 2. 去github界面上把repo的名字改成 <你的名字>.github.io 
 > github修改repo名字就是在repo页面上点那个setting，第一个选项卡就有。这里[有图有真相](https://help.github.com/articles/renaming-a-repository)。
 
-3. 修改一下repo根目录下_config.yml里面一些信息
+3. 修改一下repo根目录下_config.yml里面myblog组下的一些信息
 
-```yaml
-myblog:
-  gavatar: 你email地址的md5值
-  gpname: github账号的名字
-  linkedin: linkedin链接
-  github: github链接
-  coverimgs: index页右侧的背景图数组，替换下http那部分，没有就留个[]
-  postbgimg: blog post页的背景图url
-```
+| Key | 说明 |
+|---------|--------------------|
+| gavatar | 你email地址的md5值 |
+| gpname | github账号的名字 |
+| linkedin | linkedin链接 |
+| github | github链接 |
+| coverimgs | index页右侧的背景图数组，替换下http那部分，没有就留个[] |
+| postbgimg | blog post页的背景图url |
 
 做人不是很讲究的话，这就算是搞完了（当然，美化这种事情是永恒的，我懂得，以后随意改）
 
