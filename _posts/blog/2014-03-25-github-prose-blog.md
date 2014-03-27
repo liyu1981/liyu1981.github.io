@@ -90,6 +90,8 @@ description: github jekyll静态页面自动生成，沉浸式的书写体验，
 
 ### 设置prose.io
 
+不用prose.io，直接在github的online edit也是可以的，prose.io提供了一个稍好的编辑环境，所以可以一试。
+
 prose.io总的来说没什么配置的，不配置也行，直接访问[http://prose.io](http://prose.io) ，授权就行了。
 
 如果要配置，基本上就是在_config.yml里面添加一些个prose.io用的配置，基本上可以[参考这里]()。
@@ -97,3 +99,11 @@ prose.io总的来说没什么配置的，不配置也行，直接访问[http://p
 如果是从我给的模板fork的，那就不用修改了，已经配置好了。
 
 ## Prose.io使用上的注意事项
+
+1. Prose.io的markdown默认不显示jekyll metadata，需要点击右边的对应button显示和编辑。
+
+2. 配置了jekyll之后，prose.io默认的标题就不在是`xxxx-xx-xx-yyy-zzz.md`这样的格式，而是做为真正的title。英文的习惯下，commit到github的文件名会将这个title拆字后用`-`组合形成文件名，例如`hello world`最后会组合成`2014-03-27-hello-world`这样。使用中文的情况下，这个机制就不怎么灵光了。所以如果要避免生成一些`2014-03-27-.md`这样的名字，先在title里面用英文关键字写，commit，然后再修改成中文。这样就行。
+
+3. 如果用我模板里面的配置，prose.io里面的文章默认是unpublished，所以大可以慢慢写完再说，要发布的时候点击工具栏转成published，再commit就会自动生成。
+
+4. prose.io当前支持插入图片，会自动上传到github里面（在_config.yml里面配置）。但是太过于彪悍的文件名，比如很黄很暴力的，很多火星文的，有中国特色中文的，都会导致各种各样的问题。因此，为了世界和平，拖进去之前还是自己改个人畜无伤的名字吧。
