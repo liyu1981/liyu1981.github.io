@@ -69,7 +69,7 @@ description: github jekyll静态页面自动生成，沉浸式的书写体验，
 
 这个要求不是不可以满足，如果实在对个性化没什么要求，这儿有个123的方案
 
-1. 我准备了一个模板，fork它
+1. 我准备了一个模板，[fork它](https://github.com/liyu1981/template-githubio/fork)
 > 首先当然你要有一个github账号，没有也没有关系，会提示你创建的。
 
 2. 去github界面上把repo的名字改成 <你的名字>.github.io 
@@ -79,11 +79,11 @@ description: github jekyll静态页面自动生成，沉浸式的书写体验，
 
 | Key | 说明 |
 |---------|--------------------|
-| gavatar | 你email地址的md5值 |
+| gavatar | 你email地址的md5值，用于模板里gavatar头像显示。给个[在线计算工具](http://md5-hash-online.waraxe.us/)，注意全用小写 |
 | gpname | github账号的名字 |
 | linkedin | linkedin链接 |
 | github | github链接 |
-| coverimgs | index页右侧的背景图数组，替换下http那部分，没有就留个[] |
+| coverimgs | index页右侧的背景图数组，替换下http那部分，没有就留个`[]` |
 | postbgimg | blog post页的背景图url |
 
 做人不是很讲究的话，这就算是搞完了（当然，美化这种事情是永恒的，我懂得，以后随意改）
@@ -94,7 +94,7 @@ description: github jekyll静态页面自动生成，沉浸式的书写体验，
 
 prose.io总的来说没什么配置的，不配置也行，直接访问[http://prose.io](http://prose.io) ，授权就行了。
 
-如果要配置，基本上就是在_config.yml里面添加一些个prose.io用的配置，基本上可以[参考这里]()。
+如果要配置，基本上就是在_config.yml里面添加一些个prose.io用的配置，基本上可以[参考这里](https://github.com/prose/prose/wiki/Prose-Configuration)。
 
 如果是从我给的模板fork的，那就不用修改了，已经配置好了。
 
