@@ -55,7 +55,7 @@ vi myvm.json
 vmadm create -f myvm.json
 ```
 
-完事了```zlogin```到你的机器就行了。
+完事了`zlogin`到你的机器就行了。
 
 好了我就不班门弄斧了，我都是从[这里](http://wiki.smartos.org/display/DOC/How+to+create+a+zone+%28+OS+virtualized+machine+%29+in+SmartOS)抄的。
 
@@ -70,9 +70,9 @@ vmadm create -f myvm.json
 具体的这事情是这样：
 
 1. 默认SmartOS ISO只针对vmware做了优化，所以默认建了个vmware的bridge，还把默认网卡绑上了。
-用```dladm show-link```看看，有个```vmwarebr```吧。
+用`dladm show-link`看看，有个`vmwarebr`吧。
 
-2. 按照joyent指出的方向，问题就在要建一个叫做```vboxbr```而不是```vmwarebr```。看来是硬编码问题，典型的扯淡问题。
+2. 按照joyent指出的方向，问题就在要建一个叫做`vboxbr`而不是`vmwarebr`。看来是硬编码问题，典型的扯淡问题。
 
 那么来做
 
