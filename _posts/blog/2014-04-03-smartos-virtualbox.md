@@ -6,7 +6,7 @@ title: 在VirtualBox中跑SmartOS
 description: SmartOS是个好东西，我们用VirtualBox来跑一跑
 ---
 
-## 在VirtualBox中跑SmartOS
+## 启动虚拟机
 
 理论上来讲，这是个很简单的事情，甚至可以说不能再简单了。
 
