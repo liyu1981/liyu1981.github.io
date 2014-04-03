@@ -3,6 +3,7 @@ category: blog
 published: true
 layout: post
 title: 在VirtualBox中跑SmartOS
+description: SmartOS是个好东西，我们用VirtualBox来跑一跑
 ---
 
 ## 在VirtualBox中跑SmartOS
