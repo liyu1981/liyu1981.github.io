@@ -22,13 +22,13 @@ SmartOS里面的zone就是OS container，轻量级，隔离性好，所以一般
 
 先导入镜像
 
-```bash
+```
 imgadm import fdea06b0-3f24-11e2-ac50-0b645575ce9d
 ```
 
 然后创建一个json描述文件
 
-```bash
+```
 cd /opt
 vi myvm.json
 ```
@@ -54,7 +54,7 @@ vi myvm.json
 
 最后
 
-```bash
+```
 vmadm create -f myvm.json
 ```
 
@@ -88,7 +88,7 @@ dladm delete-bridege vmwarebr
 
 再建一个
 
-```bash
+```
 dladm create-bridge -l e1000g0 vboxbr
 ```
 
