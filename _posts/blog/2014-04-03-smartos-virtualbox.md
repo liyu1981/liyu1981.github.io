@@ -81,7 +81,7 @@ vmadm create -f myvm.json
 
 先删了那个vmwarebr
 
-```bash
+```
 dladm remove-bridge -l e1000g0 vmwarebr
 dladm delete-bridege vmwarebr
 ```
