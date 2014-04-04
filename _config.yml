@@ -63,10 +63,8 @@ prose:
 
       - name: "published"
         field:
-          element: "text"
-          label: "Publise?"
+          element: "hidden"
           value: "false"
-          type: "text"
 
       - name: "category"
         field:
