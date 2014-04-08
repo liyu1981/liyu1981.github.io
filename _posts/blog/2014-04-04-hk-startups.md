@@ -25,3 +25,5 @@ description: 香港的startups，到底有还是没有？
 3. 每年很多活动，但是能被检索到的很少。各种activity可不少，但是要么停留在宣传单上，要么存在于互联网上的pdf jpg和video中。以目前的人类科技，检索尚有困难。
 
 那就只能指望这些startups“快到碗里来了”。
+
+http://www.startbase.hk/companies
