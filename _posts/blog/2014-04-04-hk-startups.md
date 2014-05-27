@@ -1,6 +1,6 @@
 ---
 category: blog
-published: false
+published: true
 layout: post
 title: 盲人摸象：HK的startups去哪儿找
 description: 香港的startups，到底有还是没有？
