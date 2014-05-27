@@ -66,8 +66,7 @@ vmadm create -f myvm.json
 
 **更新：这件事情在最新版的SmartOS中应该已经修复了，见[这里](http://www.listbox.com/member/archive/184463/2014/05/sort/time_rev/page/1/entry/14:199/20140525031110:BCCD6764-E3DB-11E3-AC74-888FDBEDD5D3/)。**
 
-以下内容应该已经过时，但是还是留下做个参考吧
-============================================
+_以下内容应该已经过时，但是还是留下做个参考吧_
 
 > VirtualBox我设置成NAT了？啥啥我也设对了？问题解决不了，joyent的源码我都快看完了，我的zone还是上不了外网啊？？？？？？
 
