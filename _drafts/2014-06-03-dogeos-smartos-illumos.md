@@ -2,7 +2,7 @@
 published: false
 ---
 
-## DogeOS, SmartOS, illumos，这些都能不能吃？
+## DogeOS, SmartOS, illumos，这些都是什么？
 
 都是操作系统。
 都是云计算操作系统。
