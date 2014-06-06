@@ -2,6 +2,21 @@
 published: false
 ---
 
-## A New Post
+## DogeOS, SmartOS, illumos，这些都能不能吃？
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+都是操作系统。
+都是云计算操作系统。
+都是先进的云计算操作系统。
+都是小众的先进的云计算操作系统。
+
+~~讲完收工~~
+
+当然不是这么简单 :)
+
+但是也不希望写的太长。以下就尽量言简意垓的把来龙去脉，历史纠纷，以及革命先进性都说清楚。
+
+## 从illumos开始
+
+## 然后是SmartOS
+
+## 最后是DogeOS
