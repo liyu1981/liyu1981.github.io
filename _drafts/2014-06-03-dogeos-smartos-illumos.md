@@ -1,4 +1,8 @@
 ---
+layout: post
+title: 说一下DogeOS, SmartOS和illumos
+description: 一个真正面向云计算的操作系统以及其来龙去脉
+category: blog
 published: false
 ---
 
@@ -19,7 +23,7 @@ published: false
 
 什么是[illumos](http://www.illumos.org)？简单的讲，illumos是OpenSolaris的后续版本。在万恶的Oracle收购了Sun之后，原有OpenSolaris的开发者基本上都离开了Oracle，组成了illumos社区，继续对OpenSolaris先进的内核进行维护，更新，以及添加nb的新功能。这种事情在Oracle的收购史上似乎一再出现，想想MySQL，OpenOffice，Java，强烈的既视感。
 
-当然，OpenSolaris不是完蛋了，其实还[存活着](http://solaris.java.net/)。不过因为核心开发者的出走，都在illumos那边玩，很多[先进特性]()（尤以存储和虚拟化方面为甚）都不再回流。
+当然，OpenSolaris不是完蛋了，其实还[存活着](http://solaris.java.net/)。不过因为核心开发者的出走，都在illumos那边玩，很多[先进特性](http://www.slideshare.net/ahl0003/illumos-innovations-that-will-never-be-in-oracle-solaris)（尤以存储和虚拟化方面为甚）都不再回流。
 
 illumos继承了所有OpenSolaris的先进特性，例如ZFS，Zone，Crossbow和Dtrace。简单的总结
 
@@ -32,7 +36,7 @@ illumos继承了所有OpenSolaris的先进特性，例如ZFS，Zone，Crossbow�
 * Dtrace是系统管理员的终极武器，无痛在线勘察系统瓶颈的手术刀
 > MacOSX借用FreeBSD的成果移植了Dtrace，构成了Xcode中nb闪闪的instruments功能（乔老爷子亲自宣布的），linux这边限于授权协议问题，则由IBM联合RedHat克隆了一份，名为SystemTap
 
-然后，在joyent公司里面[两位神人的努力下]()，KVM功能被移植到了illumos内核环境中，于是illumos也拥有了通常所说的Type 2虚拟化技术。
+然后，在joyent公司里面[两位神人的努力下](http://www.slideshare.net/bcantrill/experiences-porting-kvm-to-smartos)，KVM功能被移植到了illumos内核环境中，于是illumos也拥有了通常所说的Type 2虚拟化技术。
 
 于是illumos = ZFS + Zone + Crossbow + Dtrace + KVM。所有云计算的关键服务在这里集合，形成了一个为云计算而生的系统内核。
 
@@ -44,15 +48,15 @@ illumos继承了所有OpenSolaris的先进特性，例如ZFS，Zone，Crossbow�
 
 于是就诞生了一批社区和公司围绕着illumos做包装工作，谓之发行版。
 
-第一个明显的方向，即是让GNU，也就是通常意义上我们以为的linux部分（Gnome，KDE，X11等等）跑在illumos内核上，组成一个可以天天使用和开发的平台。这方面诞生了OpenIndiana，安装使用这个系统，在感官层次，基本上与linux也区别不大。
+第一个明显的方向，即是让GNU，也就是通常意义上我们以为的linux部分（Gnome，KDE，X11等等）跑在illumos内核上，组成一个可以天天使用和开发的平台。这方面诞生了[OpenIndiana](http://www.openindiana.org)，安装使用这个系统，在感官层次，基本上与linux也区别不大。
 
-但是illumos的优势毕竟不是在桌面系统，而是在服务器。所以第二个方向，就是打包成一个可以给数据中心使用的云操作系统。这方面的公司，就有nexenta，delphix和joyent三家公司。前两者集中火力发挥ZFS存储的威力，对准EMC开炮。joyent则走向了云计算，不仅运营自己的公有云，也提供私有云解决方案。
+但是illumos的优势毕竟不是在桌面系统，而是在服务器。所以第二个方向，就是打包成一个可以给数据中心使用的云操作系统。这方面的公司，就有[nexenta](http://www.nexenta.com)，[delphix](http://www.delphix.com)和[joyent](http://www.joyent.com)三家公司。前两者集中火力发挥ZFS存储的威力，对准EMC开炮。joyent则走向了云计算，不仅运营自己的公有云，也提供私有云解决方案。
 
-SmartOS即是joyent在包装illumos方面的答案。joyent将illumos内核和必要的组件和命令行工具，最终打包成为了一个300MB左右的LiveCD，实现了“启动即拥有云计算能力”这个目标。
+[SmartOS](http://www.smartos.org)即是joyent在包装illumos方面的答案。joyent将illumos内核和必要的组件和命令行工具，最终打包成为了一个300MB左右的LiveCD，实现了“启动即拥有云计算能力”这个目标。
 
-joyent公司其实更加为人熟知的，莫过于其nodejs这个平台，所以SmartOS里面的关键命令行工具和组件，都是用nodejs来实现的。用javascript来实现严肃认真的服务器服务，或许这很让人觉得有些不可思议。但是joyent就是这样做的，而且用事实证明，nodejs实现的效率并不比C差。
+joyent公司其实更加为人熟知的，莫过于其[nodejs](http://www.nodejs.org)这个平台，所以SmartOS里面的关键命令行工具和组件，都是用nodejs来实现的。用javascript来实现严肃认真的服务器功能，或许这很让人觉得有些不可思议。但是joyent就是这样做的，而且用事实证明，他们干的很不错，实现的效率并不比编译好的二进制程序差。
 
-因为KVM技术是由joyent第一次整合进入illumos，所以SmartOS理所当然成为第一个能提供KVM服务（即运行CentOS，Ubuntu和Windows）的illumos发行版。当然鉴于illumos社区的良好风气，KVM on illumos从一开始就是开源项目，最后也进入illumos内核。
+因为KVM技术是由joyent第一次整合进入illumos，所以SmartOS理所当然成为第一个能提供KVM服务（即运行CentOS，Ubuntu和Windows）的illumos发行版。当然鉴于illumos社区的良好风气，[KVM on illumos](https://github.com/joyent/illumos-kvm)从一开始就是开源项目，最后也进入illumos内核。
 
 SmartOS的特点总结如下
 
