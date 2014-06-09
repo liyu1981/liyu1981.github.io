@@ -33,4 +33,20 @@ layout: home
         <div class="center circle" style="margin-top: 4px; height: 142px; width: 142px; background-image: url('https://secure.gravatar.com/avatar/{{ site.myblog.gavatar }}?s=142')"></div>
       </div>
     </div>
+    <div class="mobile-indicator"></div>
+    <script>
+      $(function() {
+        var isMobileView = $('div.mobile-indicator').css('display') === 'none';
+        if (isMobileView) {
+          $(window).scroll(function(event) {
+            console.log($('div.section').scrollTop());
+            if ($(window).scrollTop() > 10) {
+              $('div.avatar').transition({ opacity: 0 });
+            } else {
+              $('div.avatar').transition({ opacity: 1 });
+            }
+          });
+        }
+      });
+    </script>
 </div>

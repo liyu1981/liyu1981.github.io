@@ -17,8 +17,11 @@
   .sidenav {display:none;}
   .entry {float:none;width:auto;background:transparent;padding:0;box-shadow:none;margin-bottom:0px;padding-top: 20px;}
 
-  .index-content .section { margin: 0px auto; padding-right:0; z-index: 99; background-color: transparent; position: fixed; top: 0px; left: 0px; }
-  .index-content .section  { margin-left: 5%; margin-right: 5%; width:90%; }
+  .index-content .section {
+    margin: 0px auto; padding-right:0; z-index: 99; background-color: transparent; position: relative; top: 0px; left: 0px;
+    margin-left: 5%; margin-right: 5%; width:90%;
+    overflow-y: auto; z-index: 100; overflow-x: hidden;
+  }
   .index-content .cate-bar { width:90%; margin-top: 10px; text-align: right; }
   .index-content .cate-bar a { margin: auto 5px; color: #fff; border: 1px solid #fff; border-radius: 4px; padding: 4px 4px; font-weight: bold; }
   .index-content .section ul { width: 100%; }
@@ -35,4 +38,6 @@
   .blog .aside, .project .aside, .opinion .aside { position: fixed; height: 100%; width: 100%; top: 0px; z-index: 0; }
   .aside .avatar { width: 100px !important; height: 100px !important; left: 10px; top: 15px !important;}
   .aside .avatar div { width: 92px !important; height: 92px !important; background-size: 100% 100%; z-index: 199; }
+
+  .mobile-indicator { display: none; }
 }
