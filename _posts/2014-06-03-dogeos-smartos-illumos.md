@@ -1,9 +1,9 @@
 ---
 layout: post
-title: ""
+title: "说一下DogeOS, SmartOS和illumos"
 description: 一个真正面向云计算的操作系统以及其来龙去脉
 category: blog
-published: false
+published: true
 ---
 
 ## DogeOS, SmartOS, illumos，这些都是什么？
