@@ -151,7 +151,7 @@ online         Sep_22   svc:/system/system-log:default
 
 实际上，在SMF的支撑下，DogeOS以及SmartOS的服务体系发展的异常的强大。支持系统的，不再是一些独立的互不相干的服务，而是一张服务的网。
 
-![DogeOS Smf Browser](images/DogeOS-Smf-Browser.png)
+![DogeOS Smf Browser](/images/DogeOS-Smf-Browser.png)
 
 上图即展现了这张网。实际上，它是截图自[这个工具](http://www.dogeos.net/smfgraph/)。它是一个互动的工具，可以用来形象的展现DogeOS的系统服务网络。
 
