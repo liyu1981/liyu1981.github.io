@@ -10,8 +10,6 @@ url: http://liyu1981.github.io
 feed: /atom.xml
 author_info: <a href="http://liyu1981.github.io/">LI,Yu</a>
 
-exclude: ['slides']
-
 myblog:
   gavatar: 6a1f8a9d412c8e54bed896135c6f7d0c
   gpname: liyu1981
