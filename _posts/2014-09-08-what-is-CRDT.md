@@ -6,7 +6,7 @@ category: blog
 published: true
 ---
 
-[http://www.project-fifo.net](Project FiFo) 0.6.0的[release note](http://project-fifo.readthedocs.org/en/latest/general/releasenotes.html)中有这样一条：全面采用CRDT作为底层数据结构。
+[Project FiFo](http://www.project-fifo.net) 0.6.0的[release note](http://project-fifo.readthedocs.org/en/latest/general/releasenotes.html)中有这样一条：全面采用CRDT作为底层数据结构。
 
 为什么要采用CRDT，有啥好处? 其实是不太容易理解的。
 
